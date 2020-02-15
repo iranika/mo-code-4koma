@@ -107,5 +107,5 @@ proc updateFeedAtom*() =
   return
 
 proc replaceUrl4komaJs*() =
-  writeFile(exportFile4komaData, readFile(file4komaData).replace(originalSite, provideSite))
+  writeFile(exportFile4komaData, readFile(file4komaData).replace(originalSite & "/4koma", provideSite))
   return
