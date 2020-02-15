@@ -22,7 +22,7 @@ type
 const file4komaData = "4komaData.js.org"
 const exportFile4komaData = "4komaData.js"
 const originalSite = "http://momoirocode.web.fc2.com"
-const provideSite = "https://mo4koma.iranika.info"
+const provideSite = "https://mo4koma.iranika.info/4koma/ja"
 #const sqAgent = "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.99 Safari/537.36"
 
 proc writeJson4komaData*[T](stream: T, url: string) =
@@ -67,12 +67,15 @@ proc update4komaData*() =
 proc download4komaImage*() =
   if not existsDir("4koma"):
     createDir("4koma")
+    createDir("4koma/ja")
+  if not existsDir("4koma/ja"):
+    createDir("4koma/ja")
   let jsonNode4koma = readFile(file4komaData).replace("pageData = ", "").parseJson
   let list4koma: seq[PageData] = to(jsonNode4koma, seq[PageData])
   for index,item in list4koma:
     parallel:
       for imgUrl in item.ImagesUrl:
-        let saveFilename = imgUrl.replace(re".*4koma","4koma") # save 4koma/filename
+        let saveFilename = imgUrl.replace(re".*4koma","4koma/ja") # save 4koma/filename
         if existsFile(saveFilename) and index + 1 < list4koma.len : #skip other than last index.
           debugEcho "skiped save: " & saveFilename
           continue #skip download
