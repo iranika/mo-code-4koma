@@ -33,7 +33,7 @@ jobs:
         git config --global user.email "7370486+iranika@users.noreply.github.com"
         git remote set-url origin https://iranika:${GITHUB_TOKEN}@github.com/iranika/mo-code-4koma.git
         git fetch
-        git checkout refactor/selfhost
+        git checkout master
     - name: check update momoirocode 
       run: |
         export PATH=$HOME/.nimble/bin:$PATH
@@ -43,4 +43,4 @@ jobs:
         ./mosq/bin/mosq | grep -v "No updates" && \
         (git add 4koma/* 4komaData.js 4komaData.js.org feed.atom update-info.dat && \
         git commit -m "update: auto updated 4komaData by workflow" && \
-        git push origin refactor/selfhost) || echo "No updates."
+        git push origin master) || echo "No updates."
