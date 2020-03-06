@@ -232,5 +232,5 @@ pageData = [
 ,{"Title": "節分", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/231-1.jpg", "https://mo4koma.iranika.info/4koma/ja/231-2.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "おに", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/232-1.jpg", "https://mo4koma.iranika.info/4koma/ja/232-2.jpg", "https://mo4koma.iranika.info/4koma/ja/232-3.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "もうちょっと", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/233-1.jpg", "https://mo4koma.iranika.info/4koma/ja/233-2.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
-,{"Title": "温泉旅行", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/234-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
+,{"Title": "温泉旅行", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/234-1.jpg", "https://mo4koma.iranika.info/4koma/ja/234-2.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ]
