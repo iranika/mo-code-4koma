@@ -17,6 +17,8 @@
 
 翻訳作業に協力していただけるボランティアを募集しています。  
 興味がある人はiranika[@happy_packet](https://twitter.com/happy_packet)までご連絡ください。  
+Discordもありますので、ぜひJoinしてみてください。  
+https://discord.gg/nfg3nZv
 
 大まかに漫画の翻訳からリリースまでの流れを説明します。
 
