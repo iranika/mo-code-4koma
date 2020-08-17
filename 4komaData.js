@@ -242,4 +242,5 @@ pageData = [
 ,{"Title": "成長", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/241-1.jpg", "https://mo4koma.iranika.info/4koma/ja/241-2.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "ソムリエ", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/242-1.jpg", "https://mo4koma.iranika.info/4koma/ja/242-2.jpg", "https://mo4koma.iranika.info/4koma/ja/242-3.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "趣味", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/243-1.jpg", "https://mo4koma.iranika.info/4koma/ja/243-2.jpg", "https://mo4koma.iranika.info/4koma/ja/243-3.jpg", "https://mo4koma.iranika.info/4koma/ja/243-4.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
+,{"Title": "でじゃぶ", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/244-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ]
