@@ -244,4 +244,5 @@ pageData = [
 ,{"Title": "趣味", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/243-1.jpg", "https://mo4koma.iranika.info/4koma/ja/243-2.jpg", "https://mo4koma.iranika.info/4koma/ja/243-3.jpg", "https://mo4koma.iranika.info/4koma/ja/243-4.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "でじゃぶ", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/244-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "うなぎ釣り", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/245-1.jpg", "https://mo4koma.iranika.info/4koma/ja/245-2.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
+,{"Title": "ぶらっしゅあっぷ", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/246-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ]
