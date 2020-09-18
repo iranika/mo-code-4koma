@@ -244,5 +244,5 @@ pageData = [
 ,{"Title": "趣味", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/243-1.jpg", "http://momoirocode.web.fc2.com/4koma/243-2.jpg", "http://momoirocode.web.fc2.com/4koma/243-3.jpg", "http://momoirocode.web.fc2.com/4koma/243-4.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
 ,{"Title": "でじゃぶ", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/244-1.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
 ,{"Title": "うなぎ釣り", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/245-1.jpg", "http://momoirocode.web.fc2.com/4koma/245-2.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
-,{"Title": "ぶらっしゅあっぷ", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/246-1.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
+,{"Title": "ぶらっしゅあっぷ", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/246-1.jpg", "http://momoirocode.web.fc2.com/4koma/246-2.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
 ]
