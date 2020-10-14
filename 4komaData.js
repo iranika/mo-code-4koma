@@ -246,4 +246,5 @@ pageData = [
 ,{"Title": "うなぎ釣り", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/245-1.jpg", "https://mo4koma.iranika.info/4koma/ja/245-2.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "ぶらっしゅあっぷ", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/246-1.jpg", "https://mo4koma.iranika.info/4koma/ja/246-2.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "秋の気分", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/247-1.jpg", "https://mo4koma.iranika.info/4koma/ja/247-2.jpg", "https://mo4koma.iranika.info/4koma/ja/247-3.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
+,{"Title": "刺客", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/248-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ]
