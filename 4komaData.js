@@ -248,4 +248,5 @@ pageData = [
 ,{"Title": "秋の気分", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/247-1.jpg", "https://mo4koma.iranika.info/4koma/ja/247-2.jpg", "https://mo4koma.iranika.info/4koma/ja/247-3.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "刺客", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/248-1.jpg", "https://mo4koma.iranika.info/4koma/ja/248-2.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "なっちゃん", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/249-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
+,{"Title": "むかしばなし", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/250-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ]
