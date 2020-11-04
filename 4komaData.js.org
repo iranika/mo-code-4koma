@@ -248,5 +248,5 @@ pageData = [
 ,{"Title": "秋の気分", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/247-1.jpg", "http://momoirocode.web.fc2.com/4koma/247-2.jpg", "http://momoirocode.web.fc2.com/4koma/247-3.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
 ,{"Title": "刺客", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/248-1.jpg", "http://momoirocode.web.fc2.com/4koma/248-2.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
 ,{"Title": "なっちゃん", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/249-1.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
-,{"Title": "むかしばなし", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/250-1.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
+,{"Title": "むかしばなし", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/250-1.jpg", "http://momoirocode.web.fc2.com/4koma/250-2.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
 ]
