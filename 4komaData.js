@@ -249,5 +249,5 @@ pageData = [
 ,{"Title": "刺客", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/248-1.jpg", "https://mo4koma.iranika.info/4koma/ja/248-2.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "なっちゃん", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/249-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "むかしばなし", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/250-1.jpg", "https://mo4koma.iranika.info/4koma/ja/250-2.jpg", "https://mo4koma.iranika.info/4koma/ja/250-3.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
-,{"Title": "亥の日亥の月", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/251-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
+,{"Title": "亥の日亥の月", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/251-1.jpg", "https://mo4koma.iranika.info/4koma/ja/251-2.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ]
