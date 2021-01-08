@@ -48,6 +48,6 @@ jobs:
       shell: pwsh
       run: |
         cd top
-        download.ps1
+        ./download.ps1
         cd ..
         git add top/top.jpg && git commit -m "top: image was changed" && git push origin master
