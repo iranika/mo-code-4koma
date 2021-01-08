@@ -2,7 +2,7 @@ name: Update check
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '*/15 * * * *'
 
 jobs:
   build:
@@ -32,7 +32,7 @@ jobs:
         git config --global user.name "iranika"
         git config --global user.email "7370486+iranika@users.noreply.github.com"
         git remote set-url origin https://iranika:${GITHUB_TOKEN}@github.com/iranika/mo-code-4koma.git
-        git fetch
+        git pull
         git checkout master
     - name: check update momoirocode 
       run: |
