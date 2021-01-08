@@ -2,7 +2,7 @@ name: Update check
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/15 * * * *'
 
 jobs:
   build:
@@ -45,9 +45,8 @@ jobs:
         git commit -m "update: auto updated 4komaData by workflow" && \
         git push origin master) || echo "No updates."
     - name: download top image
-      shell: pwsh
       run: |
         cd top
-        ./download.ps1
+        pwsh ./download.ps1
         cd ..
         git add top/top.jpg && git commit -m "top: image was changed" && git push origin master
