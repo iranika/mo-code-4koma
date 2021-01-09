@@ -49,4 +49,4 @@ jobs:
         cd top
         pwsh ./download.ps1
         cd ..
-        git add top/top.jpg && git commit -m "top: image was changed" && git push origin master
+        (git add top/top.jpg && git commit -m "top: image was changed" && git push origin master) || echo "No updates."
