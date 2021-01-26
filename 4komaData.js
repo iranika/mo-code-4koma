@@ -254,5 +254,5 @@ pageData = [
 ,{"Title": "ボーナス", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/253-1.jpg", "https://mo4koma.iranika.info/4koma/ja/253-2.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "だまし絵", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/254-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "牛歩", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/255-1.jpg", "https://mo4koma.iranika.info/4koma/ja/255-2.jpg", "https://mo4koma.iranika.info/4koma/ja/255-3.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
-,{"Title": "おともだち", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/256-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
+,{"Title": "おともだち", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/256-1.jpg", "https://mo4koma.iranika.info/4koma/ja/256-2.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ]
