@@ -257,4 +257,5 @@ pageData = [
 ,{"Title": "おともだち", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/256-1.jpg", "https://mo4koma.iranika.info/4koma/ja/256-2.jpg", "https://mo4koma.iranika.info/4koma/ja/256-3.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "ふくろ", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/257-1.jpg", "https://mo4koma.iranika.info/4koma/ja/257-2.jpg", "https://mo4koma.iranika.info/4koma/ja/257-3.jpg", "https://mo4koma.iranika.info/4koma/ja/257-4.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "はこコレクター", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/258-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
+,{"Title": "対策", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/259-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ]
