@@ -260,4 +260,5 @@ pageData = [
 ,{"Title": "対策", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/259-1.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
 ,{"Title": "効能", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/260-1.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
 ,{"Title": "うぐいすセット", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/261-1.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
+,{"Title": "予約電話", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/262-1.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
 ]
