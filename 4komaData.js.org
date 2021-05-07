@@ -262,5 +262,5 @@ pageData = [
 ,{"Title": "うぐいすセット", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/261-1.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
 ,{"Title": "予約電話", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/262-1.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
 ,{"Title": "荷解き", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/263-1.jpg", "http://momoirocode.web.fc2.com/4koma/263-2.jpg", "http://momoirocode.web.fc2.com/4koma/263-3.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
-,{"Title": "つまみ飲み", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/264-1.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
+,{"Title": "つまみ飲み", "ImagesUrl": ["http://momoirocode.web.fc2.com/4koma/264-1.jpg", "http://momoirocode.web.fc2.com/4koma/264-2.jpg", "http://momoirocode.web.fc2.com/4koma/sp.jpg"]}
 ]
