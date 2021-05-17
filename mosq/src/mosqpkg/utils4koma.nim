@@ -112,7 +112,7 @@ proc updateFeedAtom*() =
   )[^1]
   let update = now().format("yyyy-MM-dd'T'HH':'mm':'sszzz")
   let published = now().format("yyyyMMddHHmm")
-  let content = """<img src="$lastImage"/>""" % ["lastImage", lastImage]
+  let content = """$lastImage""" % ["lastImage", lastImage]
   let auther = "iranika"
   let entry_url = "https://movue.iranika.info/#/?page=latest"
 
@@ -123,7 +123,7 @@ proc updateFeedAtom*() =
     <published>$published</published>
     <link rel="alternate" type="text/html" href="$entry_url"/>
     <title>$title</title>
-    <content type="html" xml:lang="ja">イメージ $content</content>
+    <content type="html" xml:lang="ja">$content</content>
     <author>
       <name>$auther</name>
     </author>
