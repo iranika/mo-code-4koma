@@ -27,6 +27,23 @@ const originalSite = "http://momoirocode.web.fc2.com"
 const provideSite = "https://mo4koma.iranika.info/4koma/ja"
 #const sqAgent = "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.99 Safari/537.36"
 
+proc getItemJsonString(a: XmlNode, domain: Uri): string =
+  var titleName: string = $a.innerText
+  var imagesUrl: seq[string]
+  var client = newHttpClient()
+  var res = client.get($(domain / "mocode.html"))
+  
+  debugEcho $a.attr("href")
+  res = client.get($(domain / a.attr("href")))
+  let nodes = res.body.newStringStream().parseHtml().querySelectorAll("img")
+  for img in nodes:
+    if (".jpg" in img.attr("src")) or (".png" in img.attr("src")):
+      let image_url = $(domain / "4koma" / img.attr("src").replace("./", ""))
+      imagesUrl.add(image_url)
+      debugEcho $image_url
+  result = $$PageData(Title: titleName, ImagesUrl: imagesUrl)
+
+
 proc writeJson4komaData*[T](stream: T, url: string) =
   var domain = parseUri(url)
   block uriPathClear:    
@@ -35,30 +52,17 @@ proc writeJson4komaData*[T](stream: T, url: string) =
     domain.anchor = ""
   var client = newHttpClient()
   var res = client.get($(domain / "mocode.html"))
-  let nodes = res.body.newStringStream().parseHtml().querySelectorAll("li > a")
-  var isFirstItem = true
+  var items: seq[tuple[n: int, val: FlowVar[string]]]
 
+  let nodes = res.body.newStringStream().parseHtml().querySelectorAll("li > a")
   stream.write "pageData = [\n"
-  for a in nodes:
+  parallel: 
+    for i, a in nodes:
     #li.child
-    var titleName: string = $a.innerText
-    var imagesUrl: seq[string]
-    
-    debugEcho $a.attr("href")
-    res = client.get($(domain / a.attr("href")))
-    let nodes = res.body.newStringStream().parseHtml().querySelectorAll("img")
-    
-    
-    for img in nodes:
-      if (".jpg" in img.attr("src")) or (".png" in img.attr("src")):
-        let image_url = $(domain / "4koma" / img.attr("src").replace("./", ""))
-        imagesUrl.add(image_url)
-        debugEcho $image_url
-    if isFirstItem:
-      stream.write $$PageData(Title: titleName, ImagesUrl: imagesUrl) & "\n"
-      isFirstItem = false
-    else:
-      stream.write "," & $$PageData(Title: titleName, ImagesUrl: imagesUrl) & "\n"
+      var item = spawn getItemJsonString(a, domain)
+      items.add((n: i, val: item))  
+  sync()
+  stream.write items.map(proc (item: tuple[n: int, val: FlowVar[string]]): string = ^item.val).join(", \n")
   stream.write "]"
 
 proc update4komaData*() =

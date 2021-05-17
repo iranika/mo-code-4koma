@@ -15,3 +15,4 @@ bin           = @["mosq"]
 
 requires "nim >= 1.0.4"
 requires "nimquery >= 1.2.2"
+requires "cligen"
