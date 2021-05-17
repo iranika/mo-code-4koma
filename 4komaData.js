@@ -263,4 +263,5 @@ pageData = [
 ,{"Title": "予約電話", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/262-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "荷解き", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/263-1.jpg", "https://mo4koma.iranika.info/4koma/ja/263-2.jpg", "https://mo4koma.iranika.info/4koma/ja/263-3.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ,{"Title": "つまみ飲み", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/264-1.jpg", "https://mo4koma.iranika.info/4koma/ja/264-2.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
+,{"Title": "童心", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/265-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}
 ]
