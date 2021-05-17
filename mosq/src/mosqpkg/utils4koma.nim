@@ -60,19 +60,29 @@ proc writeJson4komaData*[T](stream: T, url: string) =
     for i, a in nodes:
     #li.child
       var item = spawn getItemJsonString(a, domain)
-      items.add((n: i, val: item))  
-  sync()
-  stream.write items.map(proc (item: tuple[n: int, val: FlowVar[string]]): string = ^item.val).join(", \n")
+      items.add((n: i, val: item))
+  stream.write items.map(proc (item: tuple[n: int, val: FlowVar[string]]): string = ^item.val).join(",\n")
   stream.write "]"
 
+  
 proc update4komaData*() =
   var fp: File = open(file4komaDataOrg, FileMode.fmWrite)
   defer:
     close(fp)
   writeJson4komaData(fp, url=originalSite)
+  close(fp)
   #4komaData.jsと4komaData.jsonの生成
-  writeFile(exportFile4komaData, readFile(file4komaDataOrg).replace(originalSite & "/4koma", provideSite))
-  writeFile(exportFile4komaDataJson, readFile(exportFile4komaData).replace("pageData = ", ""))
+  fp = open(file4komaDataOrg, FileMode.fmRead)
+  var f4koma = open(exportFile4komaData, FileMode.fmWrite)
+  var f4komajson = open(exportFile4komaDataJson, FileMode.fmWrite)
+  defer:
+    close(f4koma)
+    close(f4komajson)
+  
+  while not fp.endOfFile:
+    let line = fp.readLine().replace(originalSite & "/4koma", provideSite)
+    f4koma.write(line & "\n")
+    f4komajson.write(line.replace("pageData = ", "") & "\n")
 
 proc download4komaImage*() =
   if not existsDir("4koma"):
