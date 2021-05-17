@@ -105,14 +105,14 @@ proc download4komaImage*() =
 
 
 proc updateFeedAtom*() =
-  let list4koma: seq[PageData] = readFile(file4komaDataOrg).replace("pageData = ", "").parseJson.to(seq[PageData])
+  let list4koma: seq[PageData] = readFile(exportFile4komaDataJson).parseJson.to(seq[PageData])
   let title = list4koma[^1].Title
   let lastImage = list4koma[^1].ImagesUrl.filter(
     proc (img: string): bool = img.contains("sp.jpg") == false
   )[^1]
   let update = now().format("yyyy-MM-dd'T'HH':'mm':'sszzz")
   let published = now().format("yyyyMMddHHmm")
-  let content = """<img src="$lastImage" /> """ % ["lastImage", lastImage]
+  let content = """<img src="$lastImage"/>""" % ["lastImage", lastImage]
   let auther = "iranika"
   let entry_url = "https://movue.iranika.info/#/?page=latest"
 
@@ -123,7 +123,7 @@ proc updateFeedAtom*() =
     <published>$published</published>
     <link rel="alternate" type="text/html" href="$entry_url"/>
     <title>$title</title>
-    <content type="html">$content</content>
+    <content type="html" xml:lang="ja">イメージ $content</content>
     <author>
       <name>$auther</name>
     </author>
