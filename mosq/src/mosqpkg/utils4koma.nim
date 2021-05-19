@@ -118,7 +118,7 @@ proc updateFeedAtom*() =
 
   let addFeedEntryStr = """<!--insertEntry-->
   <entry>
-    <id>tag:iranika.github.io,2019:Repository/194400309/$title</id>
+    <id>tag:iranika.github.io,2019:Repository/194400309/$published</id>
     <updated>$update</updated>
     <published>$published</published>
     <link rel="alternate" type="text/html" href="$entry_url"/>
