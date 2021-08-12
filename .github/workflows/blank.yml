@@ -29,6 +29,7 @@ jobs:
         curl https://nim-lang.org/choosenim/init.sh -sSf > init.sh
         sh init.sh -y
     - uses: actions/checkout@v2
+    - uses: FedericoCarboni/setup-ffmpeg@v1
     - name: initialize git setting.
       run: |
         git config --global user.name "iranika"
@@ -52,7 +53,6 @@ jobs:
         pwsh ./download.ps1
         cd ..
         (git add top/top.jpg && git commit -m "top: image was changed" && git push origin master) || echo "No updates."
-    - uses: FedericoCarboni/setup-ffmpeg@v1
     - name: generate webp
       run: |
-        ffmpg
+        ffmpeg
