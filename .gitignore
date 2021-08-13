@@ -2,3 +2,4 @@ mosq/4koma/*
 mosq/*.dat
 mosq/bin/
 .ionide/*
+desktop.ini
