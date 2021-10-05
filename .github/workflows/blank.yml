@@ -10,25 +10,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Cache choosenim
-      id: cache-choosenim
-      uses: actions/cache@v1
-      with:
-        path: ~/.choosenim
-        key: ${{ runner.os }}-choosenim-1.2.2
+    - uses: actions/checkout@v2
     - name: Cache nimble
       id: cache-nimble
       uses: actions/cache@v1
       with:
         path: ~/.nimble
-        key: ${{ runner.os }}-nimble-1.2.2
-    - name: Install Nim & mosq build
-      if: steps.cache-choosenim.outputs.cache-hit != 'true' || steps.cache-nimble.outputs.cache-hit != 'true'
-      run: |
-        export CHOOSENIM_CHOOSE_VERSION="1.2.2"
-        curl https://nim-lang.org/choosenim/init.sh -sSf > init.sh
-        sh init.sh -y
-    - uses: actions/checkout@v2
+        key: ${{ runner.os }}-nimble-${{ hashFiles('*.nimble') }}
+      if: runner.os != 'Windows'
+    - uses: jiro4989/setup-nim-action@v1
+      with:
+        nim-version: '1.2.x' # default is 'stable'
     - uses: FedericoCarboni/setup-ffmpeg@v1
     - name: initialize git setting.
       run: |
@@ -39,7 +31,6 @@ jobs:
         git checkout master
     - name: check update momoirocode 
       run: |
-        export PATH=$HOME/.nimble/bin:$PATH
         cd mosq
         nimble build -y
         cd ..
