@@ -7,6 +7,17 @@
   <updated>2020-01-26T01:00:54+09:00</updated>
   <!--insertEntry-->
   <entry>
+    <id>tag:iranika.github.io,2019:Repository/194400309/202110091925</id>
+    <updated>2021-10-09T19:25:45+00:00</updated>
+    <published>202110091925</published>
+    <link rel="alternate" type="text/html" href="https://movue.iranika.info/#/?page=latest"/>
+    <title>第一歩</title>
+    <content type="html" xml:lang="ja">https://mo4koma.iranika.info/4koma/ja/275-4.jpg</content>
+    <author>
+      <name>iranika</name>
+    </author>
+  </entry>
+  <entry>
     <id>tag:iranika.github.io,2019:Repository/194400309/202110070207</id>
     <updated>2021-10-07T02:07:08+00:00</updated>
     <published>202110070207</published>
