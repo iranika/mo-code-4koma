@@ -273,4 +273,5 @@ pageData = [
 {"Title": "アウトドア", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/272-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]},
 {"Title": "お小言", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/273-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]},
 {"Title": "厚み", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/274-1.jpg", "https://mo4koma.iranika.info/4koma/ja/274-2.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]},
-{"Title": "第一歩", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/275-1.jpg", "https://mo4koma.iranika.info/4koma/ja/275-2.jpg", "https://mo4koma.iranika.info/4koma/ja/275-3.jpg", "https://mo4koma.iranika.info/4koma/ja/275-4.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}]
+{"Title": "第一歩", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/275-1.jpg", "https://mo4koma.iranika.info/4koma/ja/275-2.jpg", "https://mo4koma.iranika.info/4koma/ja/275-3.jpg", "https://mo4koma.iranika.info/4koma/ja/275-4.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]},
+{"Title": "せいちょう", "ImagesUrl": ["https://mo4koma.iranika.info/4koma/ja/276-1.jpg", "https://mo4koma.iranika.info/4koma/ja/sp.jpg"]}]
