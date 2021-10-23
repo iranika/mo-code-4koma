@@ -9,5 +9,9 @@ $last5 = ((Get-ChildItem -Filter "*.jpg") | Sort-Object { $_.LastWriteTime })[-1
         ffmpeg -y -i $_ ("webp/$_" -replace ".jpg",".webp")
     }
 }
+Set-Location $PSScriptRoot/top
+
+ffmpeg -y -i top.jpg top.webp
 
 Set-Location $PSScriptRoot
+
