@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="ja-JP">
   <id>tag:iranika.github.io,2019:https://iranika.github.io/mo-code/</id>
   <link type="text/html" rel="alternate" href="https://iranika.github.io/mo-code/" />
-  <link type="application/atom+xml" rel="self" href="https://iranika.github.io/mo-code/feed.atom" />
+  <link type="application/atom+xml" rel="self" href="https://iranika.github.io/mo-code-4koma/feed.atom" />
   <title>みちくさびゅあー</title>
   <updated>2020-01-26T01:00:54+09:00</updated>
   <!--insertEntry-->
