@@ -110,6 +110,38 @@ proc updateFeedAtom*() =
   let lastImage = list4koma[^1].ImagesUrl.filter(
     proc (img: string): bool = img.contains("sp.jpg") == false
   )[^1]
+
+  proc jstInfo(time: Time): ZonedTime =
+    ZonedTime(utcOffset: -32400, isDst: false, time: time)
+  let jst = newTimezone("Asia/Tokyo", jstInfo, jstInfo)
+  let update = now().inZone(jst).format("yyyy-MM-dd'T'HH':'mm':'sszzz")
+  let published = update
+  let content = """$lastImage""" % ["lastImage", lastImage]
+  let auther = "iranika"
+  let entry_url = "https://movue.iranika.info/#/?page=latest"
+
+  let addFeedEntryStr = """<!--insertEntry-->
+  <entry>
+    <id>tag:iranika.github.io,2019:Repository/194400309/$published</id>
+    <updated>$update</updated>
+    <published>$published</published>
+    <link rel="alternate" type="text/html" href="$entry_url"/>
+    <title>$title</title>
+    <content type="html" xml:lang="ja">$content</content>
+    <author>
+      <name>$auther</name>
+    </author>
+  </entry>""" % ["title", title, "update", update, "content", content, "auther", auther, "entry_url", entry_url, "published", published]
+  writeFile("feed.atom", readFile("feed.atom").replace("<!--insertEntry-->", addFeedEntryStr))
+  debugEcho addFeedEntryStr
+  return
+
+proc updateFeedRss*() =
+  let list4koma: seq[PageData] = readFile(exportFile4komaDataJson).parseJson.to(seq[PageData])
+  let title = list4koma[^1].Title
+  let lastImage = list4koma[^1].ImagesUrl.filter(
+    proc (img: string): bool = img.contains("sp.jpg") == false
+  )[^1]
   let update = now().format("yyyy-MM-dd'T'HH':'mm':'sszzz")
   let published = now().format("yyyyMMddHHmm")
   let content = """$lastImage""" % ["lastImage", lastImage]
