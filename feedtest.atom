@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="ja-JP">
+  <id>tag:iranika.github.io,2019:</id>
+  <link type="text/html" rel="alternate" href="https://iranika.github.io/mo-code/" />
+  <link type="application/atom+xml" rel="self" href="https://iranika.github.io/mo-code-4koma/feed.atom" />
+  <author>
+    <name>iranika</name>
+  </author>
+  <title>みちくさびゅあー</title>
+  <updated>2020-01-26T01:00:54+09:00</updated>
+  <!--insertEntry-->
+  <entry>
+    <updated>2021-10-29T19:45:58+00:00</updated>
+    <published>2021-10-29T19:45:58+00:00</published>
+    <link rel="alternate" type="text/html" href="https://movue.iranika.info/#/?page=latest"/>
+    <title>もういちど1</title>
+    <content type="html" xml:lang="ja">https://mo4koma.iranika.info/4koma/ja/277-1.jpg</content>
+  </entry>
+  <entry>
+    <updated>2021-10-29T19:45:58+00:00</updated>
+    <published>2021-10-29T19:45:58+00:00</published>
+    <link rel="alternate" type="text/html" href="https://movue.iranika.info/#/?page=latest"/>
+    <title>もういちど2</title>
+    <content type="html" xml:lang="ja">https://mo4koma.iranika.info/4koma/ja/277-1.jpg</content>
+  </entry>
+  <entry>
+    <updated>2021-10-29T19:45:58+00:00</updated>
+    <published>2021-10-29T19:45:58+00:00</published>
+    <link rel="alternate" type="text/html" href="https://movue.iranika.info/#/?page=latest"/>
+    <title>もういちど3</title>
+    <content type="html" xml:lang="ja">https://mo4koma.iranika.info/4koma/ja/277-1.jpg</content>
+  </entry>
+  <entry>
+    <updated>2021-10-29T19:45:58+00:00</updated>
+    <published>2021-10-29T19:45:58+00:00</published>
+    <link rel="alternate" type="text/html" href="https://movue.iranika.info/#/?page=latest"/>
+    <title>もういちど4</title>
+    <content type="html" xml:lang="ja">https://mo4koma.iranika.info/4koma/ja/277-1.jpg</content>
+  </entry>
+</feed>
