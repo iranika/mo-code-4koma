@@ -115,7 +115,7 @@ proc updateFeedAtom*() =
     ZonedTime(utcOffset: -32400, isDst: false, time: time)
   let jst = newTimezone("Asia/Tokyo", jstInfo, jstInfo)
   let update = now().inZone(jst).format("yyyy-MM-dd'T'HH':'mm':'sszzz")
-  let published = update
+  let published = now().format("yyyyMMddHHmm")
   let content = """$lastImage""" % ["lastImage", lastImage]
   let auther = "iranika"
   let entry_url = "https://movue.iranika.info/#/?page=latest"
@@ -124,7 +124,7 @@ proc updateFeedAtom*() =
   <entry>
     <id>tag:iranika.github.io,2019:Repository/194400309/$published</id>
     <updated>$update</updated>
-    <published>$published</published>
+    <published>$update</published>
     <link rel="alternate" type="text/html" href="$entry_url"/>
     <title>$title</title>
     <content type="html" xml:lang="ja">$content</content>
