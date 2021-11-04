@@ -14,6 +14,9 @@ $entry = @"
     <link rel="alternate" type="text/html" href="http://momoirocode.web.fc2.com/"/>
     <title>TOP絵が更新されたよ</title>
     <content type="html" xml:lang="ja">https://mo4koma.iranika.info/top/top.jpg</content>
+    <author>
+      <name>iranika</name>
+    </author>
   </entry>
 "@
 
