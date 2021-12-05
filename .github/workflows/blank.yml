@@ -42,8 +42,8 @@ jobs:
       run: |
         cd top
         pwsh ./download.ps1
+        (git add top.jpg && git commit -m "top: image was changed" && (pwsh ./update-feed.ps1) && git add feed.atom && git commit -m "top: feed was updated." && git push origin master) || echo "No updates."
         cd ..
-        (git add top/top.jpg && git commit -m "top: image was changed" && (pwsh ./update-feed.ps1) && git add top/feed.atom && git commit -m "top: feed was updated." && git push origin master) || echo "No updates."
     - name: generate webp
       run: |
         pwsh generate-webp.ps1 && (git add 4koma/* top/top.* && git commit -m "update webp files." && git push origin master) || echo "No updates."
