@@ -20,7 +20,7 @@ jobs:
       if: runner.os != 'Windows'
     - uses: jiro4989/setup-nim-action@v1
       with:
-        nim-version: '1.2.x' # default is 'stable'
+        nim-version: '1.4.x' # default is 'stable'
     - uses: FedericoCarboni/setup-ffmpeg@v1
     - name: initialize git setting.
       run: |
