@@ -35,7 +35,7 @@ jobs:
         nimble build -y
         cd ..
         ./mosq/bin/mosq update | grep -v "No updates" && \
-        (git add 4koma/* 4komaData.json 4komaData.js 4komaData.js.org feed.atom update-info.dat && \
+        (git add 4koma/* 4komaData.json 4komaDataMin.js 4komaData.js 4komaData.js.org feed.atom update-info.dat && \
         git commit -m "update: auto updated 4komaData by workflow" && \
         git push origin master) || echo "No updates."
     - name: download top image
