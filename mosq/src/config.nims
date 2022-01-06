@@ -1,1 +1,2 @@
---threads:on --gc:orc
+switch("gc", "orc")
+--threads:on
