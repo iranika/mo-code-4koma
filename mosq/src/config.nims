@@ -1,2 +1,2 @@
-switch("gc", "orc")
+switch("gc", "arc")
 --threads:on
