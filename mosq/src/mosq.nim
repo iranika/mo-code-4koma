@@ -8,8 +8,8 @@ const mocode_url = "http://momoirocode.web.fc2.com/mocode.html"
 
 template Update =
   update4komaData()
-  download4komaImage()
   updateFeedAtom()
+  download4komaImage()
 
 proc update(nocash=false) =
   if nocash:
