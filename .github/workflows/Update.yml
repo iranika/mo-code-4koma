@@ -1,0 +1,38 @@
+name: Update check
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Cache nimble
+      id: cache-nimble
+      uses: actions/cache@v1
+      with:
+        path: ~/.nimble
+        key: ${{ runner.os }}-nimble-${{ hashFiles('*.nimble') }}
+      if: runner.os != 'Windows'
+    - uses: jiro4989/setup-nim-action@v1
+      with:
+        nim-version: '1.6.x' # default is 'stable'
+    - uses: FedericoCarboni/setup-ffmpeg@v1
+    - name: initialize git setting.
+      run: |
+        git config --global user.name "iranika"
+        git config --global user.email "7370486+iranika@users.noreply.github.com"
+        git remote set-url origin https://iranika:${GITHUB_TOKEN}@github.com/iranika/mo-code-4koma.git
+        git pull
+        git checkout master
+    - name: check update momoirocode 
+      run: |
+        cd mosq
+        nimble build -y
+        cd ..
+        ./mosq/bin/mosq dev --download && \
+        pwsh generate-webp.ps1 && \
+        (git add 4koma/* && \
+        git commit -m "download: download image file" && \
+        git push origin master) || echo "error download"
