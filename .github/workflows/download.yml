@@ -1,4 +1,4 @@
-name: Update check
+name: download
 
 on:
   workflow_dispatch:
