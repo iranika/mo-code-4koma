@@ -23,13 +23,13 @@ $list = $dom | % {
 }
 
 class PageData {
-    [string] $title
-    [string] $baseUrl
-    [string[]] $images
+    [string] $Title
+    [string] $BaseUrl
+    [string[]] $ImagesUrl
     PageData([string]$title, [string]$baseUrl, [string[]]$images){
-        $this.title = $title
-        $this.baseUrl = $baseUrl
-        $this.images = $images
+        $this.Title = $title
+        $this.BaseUrl = $baseUrl
+        $this.ImagesUrl = $images
     }
 }
 
