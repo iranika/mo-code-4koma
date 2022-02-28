@@ -4,7 +4,10 @@ param (
     [String]
     $SiteUrl = "http://momoirocode.web.fc2.com/mocode.html"
     ,$OutFile = "4komaData.json"
+    ,[switch] $ReturnNewContentOnly
 )
+
+Import-Module AngleParse
 
 $dom = Invoke-WebRequest $SiteUrl | Select-HtmlContent "li", @{
     title = "a"
@@ -32,6 +35,15 @@ class PageData {
         $this.ImagesUrl = $images
     }
 }
+
+if ($ReturnNewContentOnly){
+    #JSON全体を生成せずに最新話だけ出力するオプション
+    $imgs = Invoke-WebRequest $list[-1].href | Select-HtmlContent "img", @{
+        src = [AngleParse.Attr]::Src
+    } | ? { !([string]$_.src).Contains("counter_img.php?id=50") } | % { $_.src }
+    return New-Object PageData($list[-1].Title, $list[-1].href, $imgs)
+}
+
 
 $obj = $list | % {
     $imgs = Invoke-WebRequest $_.href | Select-HtmlContent "img", @{
