@@ -36,4 +36,4 @@ jobs:
       shell: pwsh
       run: |
         & ./mops/mops.ps1 -Debug
-        (git add feed.atom update-info.dat && git commit -m "mops: find new update." && git push)
+        (git add feed.atom update-info.dat && git commit -m "mops: find new update." && git push) || echo "No update."
