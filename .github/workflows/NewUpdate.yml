@@ -21,7 +21,20 @@ jobs:
         git remote set-url origin https://iranika:${GITHUB_TOKEN}@github.com/iranika/mo-code-4koma.git
         git pull
         git checkout mops
-    - name: check update momoirocode 
+    - name: Setup PowerShell module cache
+      id: cacher
+      uses: actions/cache@v2
+      with:
+        path: "~/.local/share/powershell/Modules"
+        key: ${{ runner.os }}-AngleParse
+    - name: install module
+      if: steps.cacher.outputs.cache-hit != 'true'
+      shell: pwsh
       run: |
-        pwsh ./mops/mops.ps1
+        Set-PSRepository PSGallery -InstallationPolicy Trusted
+        Install-Module AngleParse
+    - name: check update momoirocode 
+      shell: pwsh
+      run: |
+        & ./mops/mops.ps1
         (git add feed.atom update-info.dat && git commit -m "mops: find new update." && git push origin mops)
