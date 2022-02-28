@@ -4,6 +4,7 @@ param (
     [string]
     $OutFile = "feed.atom"
     ,$update = (Get-Date -Format "yyyy-MM-ddTHH:mm:ssK")
+    ,$published = (Get-Date $update -Format "yyyyMMddHHmm")
     ,$auther = "iranika"
     ,$entry_url = "https://movue.iranika.info/#/?page=latest"
     ,$JsonFile = "./4komaData.json"
@@ -37,7 +38,7 @@ Write-Debug $lastImage
 $insertItem = @"
   <!--insertEntry-->
   <entry>
-    <id>tag:iranika.github.io,2019:Repository/194400309/$published</id>
+    <id>tag:iranika.github.io,2019:Repository/194400309/$($published)</id>
     <updated>$($update)</updated>
     <published>$($update)</published>
     <link rel="alternate" type="text/html" href="$($entry_url)"/>
