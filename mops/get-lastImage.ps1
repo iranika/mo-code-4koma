@@ -3,6 +3,7 @@ param (
     [Parameter()]
     [string]
     $JsonFile = "./4komaData.json"
+    ,$DataObject = "null"
 )
 
 if (!(Test-Path $JsonFile)){
@@ -20,8 +21,13 @@ function Get-LastContent() {
     }
     return $json[-1]
 }
-  
-$lastContent = (Get-LastContent)
+
+if ($DataObject -eq "null"){
+    $lastContent = (Get-LastContent)
+}else {
+    Write-Debug "choose object-data mode."
+    $lastContent = $DataObject
+}
 
 $lastImage = ($lastContent.ImagesUrl | ? { $_ -ne "sp.jpg" })[-1]
 $lastImageUrl = New-Object System.Uri((New-Object System.Uri("http://momoirocode.web.fc2.com/4koma/")), $lastImage)
