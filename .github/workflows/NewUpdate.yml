@@ -20,8 +20,8 @@ jobs:
         git config --global user.email "7370486+iranika@users.noreply.github.com"
         git remote set-url origin https://iranika:${GITHUB_TOKEN}@github.com/iranika/mo-code-4koma.git
         git pull
-        git checkout master
+        git checkout mops
     - name: check update momoirocode 
       run: |
         pwsh ./mops/mops.ps1
-        (git add feed.atom update-info.dat && git commit -m "mops: find new update." && git push origin master)
+        (git add feed.atom update-info.dat && git commit -m "mops: find new update." && git push origin mops)
