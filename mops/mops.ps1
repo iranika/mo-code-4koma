@@ -17,7 +17,7 @@ if ($check){
     
     #NOTE: 現状は4komaData.jsonを自動生成しないのでReturnNewContentOnlyオプションで最短実行する
     $newContent = & $PSScriptRoot/update-json -ReturnNewContentOnly -Debug
-    Write-Debug "new-content: $newContent"
+    Write-Debug "new-content: $($newContent | ConvertTo-Json)"
     & $PSScriptRoot/update-feed.ps1 -DataObject $newContent -Debug
     $check.Hash | Out-File $OutFile -Encoding utf8 -NoNewline
 

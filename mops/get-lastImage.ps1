@@ -29,7 +29,14 @@ if ($DataObject -eq "null"){
     $lastContent = $DataObject
 }
 
-$lastImage = ($lastContent.ImagesUrl | ? { $_ -ne "sp.jpg" })[-1]
+Write-Debug "last-contet: $($lastContent | ConvertTo-Json)"
+$images = $lastContent.ImagesUrl | ? { $_ -ne "sp.jpg" }
+Write-Debug "images: $($images | ConvertTo-Json)"
+if ($images -is [System.String]){
+    $lastImage = $images
+}else{
+    $lastImage = $images[-1]
+}
 Write-Debug "lastimage: $lastImage"
 $lastImageUrl = New-Object System.Uri((New-Object System.Uri("http://momoirocode.web.fc2.com/4koma/")), $lastImage)
 
