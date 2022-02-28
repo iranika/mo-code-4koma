@@ -30,6 +30,7 @@ if (!(Test-Path $OutFile)){
 if ($DataObject -eq "null"){
   $lastImage = & $PSScriptRoot/get-lastImage.ps1
 }else{
+  Write-Debug "data-object: $DataObject"
   $lastImage = & $PSScriptRoot/get-lastImage.ps1 -DataObject $DataObject
 }
 
