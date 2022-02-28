@@ -16,9 +16,9 @@ if ($check){
     #.$PSScriptRoot/generate-webp.ps1
     
     #NOTE: 現状は4komaData.jsonを自動生成しないのでReturnNewContentOnlyオプションで最短実行する
-    $newContent = & $PSScriptRoot/update-json -ReturnNewContentOnly
+    $newContent = & $PSScriptRoot/update-json -ReturnNewContentOnly -Debug
     Write-Debug "$newContent"
-    & $PSScriptRoot/update-feed.ps1 -DataObject $newContent
+    & $PSScriptRoot/update-feed.ps1 -DataObject $newContent -Debug
     $check.Hash | Out-File $OutFile -Encoding utf8 -NoNewline
 
     return $true

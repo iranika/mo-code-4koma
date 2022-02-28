@@ -30,6 +30,7 @@ if ($DataObject -eq "null"){
 }
 
 $lastImage = ($lastContent.ImagesUrl | ? { $_ -ne "sp.jpg" })[-1]
+Write-Debug "lastimage: $lastImage"
 $lastImageUrl = New-Object System.Uri((New-Object System.Uri("http://momoirocode.web.fc2.com/4koma/")), $lastImage)
 
 class lastContent{
