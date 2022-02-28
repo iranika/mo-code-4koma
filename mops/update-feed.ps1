@@ -28,12 +28,12 @@ if (!(Test-Path $OutFile)){
 }
 
 if ($DataObject -eq "null"){
-  $lastImage = .$PSScriptRoot/get-lastImage.ps1
+  $lastImage = & $PSScriptRoot/get-lastImage.ps1
 }else{
-  $lastImage = .$PSScriptRoot/get-lastImage.ps1 -DataObject $DataObject
+  $lastImage = & $PSScriptRoot/get-lastImage.ps1 -DataObject $DataObject
 }
 
-Write-Debug $lastImage
+Write-Debug "last-image: $lastImage"
 
 $insertItem = @"
   <!--insertEntry-->
