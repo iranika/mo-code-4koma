@@ -20,7 +20,7 @@ jobs:
         git config --global user.email "7370486+iranika@users.noreply.github.com"
         git remote set-url origin https://iranika:${GITHUB_TOKEN}@github.com/iranika/mo-code-4koma.git
         git pull
-        git checkout mops
+        git checkout master
     - name: Setup PowerShell module cache
       id: cacher
       uses: actions/cache@v2
