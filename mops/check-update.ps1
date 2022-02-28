@@ -15,17 +15,20 @@ $stream = [IO.MemoryStream]::new([Text.Encoding]::UTF8.GetBytes($content))
 
 $hash = Get-FileHash -InputStream $stream -Algorithm SHA256
 
-$oldHash = (Get-Content $ReadFile -Raw)
+$oldHash = (Get-Content $ReadFile -Raw) ?? "no data"
 
-echo $hash.Hash
-echo $oldHash
+Write-Debug $hash.Hash
+Write-Debug $oldHash
+
 if ($oldHash -eq $hash.Hash){
-    echo "hash has not updated."
+    Write-Debug "hash has not updated."
+    return $false
 }else {
-    echo "hash has update."
+    Write-Debug "hash has update."
+    return $hash
     if (!$NoSaveHashFile){
         $hash.Hash | Out-File -FilePath $OutFile -Encoding utf8 -NoNewline
-        echo "hash saved $OutFile"
+        Write-Debug "hash saved $OutFile"
     }
 }
 
