@@ -1,0 +1,27 @@
+name: New Update Check
+
+on:
+  workflow_dispatch:
+  
+  schedule:
+    - cron: '*/20 * * * *'
+      branches:
+        - mops
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: FedericoCarboni/setup-ffmpeg@v1
+    - name: initialize git setting.
+      run: |
+        git config --global user.name "iranika"
+        git config --global user.email "7370486+iranika@users.noreply.github.com"
+        git remote set-url origin https://iranika:${GITHUB_TOKEN}@github.com/iranika/mo-code-4koma.git
+        git pull
+        git checkout master
+    - name: check update momoirocode 
+      run: |
+        pwsh ./mops/mops.ps1
+        (git add feed.atom update-info.dat && git commit -m "mops: find new update." && git push origin master)
