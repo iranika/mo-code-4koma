@@ -7,6 +7,8 @@ param (
     ,$auther = "iranika"
     ,$entry_url = "https://movue.iranika.info/#/?page=latest"
     ,$JsonFile = "./4komaData.json"
+    ,$lastImage = (& $PSScriptRoot/get-lastImage.ps1)
+    ,$DataObject = "null"
 )
 
 if (!(Test-Path $OutFile)){
@@ -24,7 +26,11 @@ if (!(Test-Path $OutFile)){
   $FeedDefault | Out-File $OutFile -Encoding utf8 
 }
 
-$lastImage = .$PSScriptRoot/get-lastImage.ps1
+if ($DataObject -eq "null"){
+  $lastImage = .$PSScriptRoot/get-lastImage.ps1
+}else{
+  $lastImage = .$PSScriptRoot/get-lastImage.ps1 -DataObject $DataObject
+}
 
 Write-Debug $lastImage
 
