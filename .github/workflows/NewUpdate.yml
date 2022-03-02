@@ -1,0 +1,49 @@
+name: New Update Check
+
+on:
+  workflow_dispatch:
+  
+  schedule:
+    - cron: '*/20 * * * *'
+      branches:
+        - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: FedericoCarboni/setup-ffmpeg@v1
+    - name: initialize git setting.
+      run: |
+        git config --global user.name "iranika"
+        git config --global user.email "7370486+iranika@users.noreply.github.com"
+        git remote set-url origin https://iranika:${GITHUB_TOKEN}@github.com/iranika/mo-code-4koma.git
+        git pull
+    - name: Setup PowerShell module cache
+      id: cacher
+      uses: actions/cache@v2
+      with:
+        path: "~/.local/share/powershell/Modules"
+        key: ${{ runner.os }}-AngleParse
+    - name: install module
+      if: steps.cacher.outputs.cache-hit != 'true'
+      shell: pwsh
+      run: |
+        Set-PSRepository PSGallery -InstallationPolicy Trusted
+        Install-Module AngleParse
+    - name: check update momoirocode 
+      shell: pwsh
+      run: |
+        & ./mops/mops.ps1 -Debug
+    - name: commit 4koma feed and imgage
+      run: |
+        (git add feed.atom update-info.dat 4koma/* 4komaData.json 4komaDataMin.js 4komaData.js && git commit -m "mops: find new update." && git push) || echo "No update."
+    - name: download top image.
+      shell: pwsh
+      run: |
+        & ./top/download.ps1
+    - name: commit top image.
+      run: |
+        (git add top/top.jpg top/top.webp && git commit -m "top:image was changed" && pwsh ./top/update-feed.ps1 && git add top/feed.atom && git commit -m "top:feed was updated" && git push) || echo "No update top page."
+
