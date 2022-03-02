@@ -45,15 +45,31 @@ if ($ReturnNewContentOnly){
 }
 
 
-$obj = $list | % {
-    $imgs = Invoke-WebRequest $_.href | Select-HtmlContent "img", @{
+$obj = 0..($list.count -1) | % -parallel {
+    #NOTE: parallelオプションを使うとソートが必要になるので注意
+    #NOTE: $listのindexを取るためにあえて0..MaxLength-1でForEachしている
+    Import-Module AngleParse
+    class PageData {
+        [string] $Title
+        [string] $BaseUrl
+        [string[]] $ImagesUrl
+        PageData([string]$title, [string]$baseUrl, [string[]]$images){
+            $this.Title = $title
+            $this.BaseUrl = $baseUrl
+            $this.ImagesUrl = $images
+        }
+    }
+    $imgs = Invoke-WebRequest ($using:list)[$_].href | Select-HtmlContent "img", @{
         src = [AngleParse.Attr]::Src
     } | ? { !([string]$_.src).Contains("counter_img.php?id=50") } | % { $_.src }
     
-    $result = New-Object PageData($_.title, $_.href, $imgs)
+    $result = New-Object PageData(($using:list)[$_].title, ($using:list)[$_].href, $imgs)
     Write-Information $result
-    return $result
-}
+    return @{
+        Index = $_
+        Page = $result
+    }
+} | Sort-Object -Property Index | % { $_.Page }
 
 $obj
 $obj | ConvertTo-Json | Out-File $OutFile -Encoding utf8
