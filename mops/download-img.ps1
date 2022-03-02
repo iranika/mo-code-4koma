@@ -12,7 +12,7 @@ $json = Get-Content $InputFile | ConvertFrom-Json
 $saveDir = "./4koma/"
 if (!(Test-Path "$saveDir/ja")) { mkdir "$saveDir/ja" -Force }
 
-$spfile = Join-Path $saveDir "sp.jpg"
+$spfile = Join-Path $saveDir "ja/sp.jpg"
 if (!(Test-Path $spfile)){
     $l = New-Object System.Uri((New-Object System.Uri("http://momoirocode.web.fc2.com/")), $spfile)
     Invoke-WebRequest $l -OutFile $spfile
@@ -41,8 +41,8 @@ if (!$OnlyRecently) {
 $json[-2..-1] | % -parallel {
     $_.ImagesUrl | % {
         $DebugPreference = $using:DebugPreference
+        $savePath = Join-Path $using:saveDir "ja/$_"
         $downloadFilePath = Join-Path $using:saveDir $_
-        $savePath = Join-Path $using:saveDir "ja/"
         Write-Debug "savePath: $savePath"
         Write-Debug "sp-check: $savePath : $($using:spfile)"
         if ($savePath -ne $using:spfile){
