@@ -8,22 +8,19 @@ param (
 $base = pwd
 Set-Location ./4koma/ja
 
-#TODO: 並列DLにより最後の書き込み時間で新旧判断できないのでどうにかする
 if ($OnlyRecently){
-    (Get-ChildItem -Name -Filter "*.jpg" | Sort-Object { $_.LastWriteTime })[-1..-5] | % -Parallel {
-        if ($_ -in $last5){
-            ffmpeg -n -i $_ ("webp/$_" -replace ".jpg",".webp")
-        }else{
-            ffmpeg -y -i $_ ("webp/$_" -replace ".jpg",".webp")
-        }
+    (Get-ChildItem -Filter "*.jpg" | Sort-Object -Property LastWriteTime)[-5..-1] | % -Parallel {
+        Write-Debug "webp fille: $($_.Name)"
+        ffmpeg -n -i $_ ("webp/$($_.Name)" -replace ".jpg",".webp")
     }
 }else{
     $last5 = ((Get-ChildItem -Filter "*.jpg") | Sort-Object { $_.LastWriteTime })[-1..-5].Name
-    (Get-ChildItem -Name -Filter "*.jpg") | % -Parallel {
-        if ($_ -in $last5){
-            ffmpeg -n -i $_ ("webp/$_" -replace ".jpg",".webp")
+    (Get-ChildItem -Filter "*.jpg") | % -Parallel {
+        Write-Debug "webp fille: $($_.Name)"
+        if ($($_.Name) -in $last5){
+            ffmpeg -n -i $_ ("webp/$($_.Name)" -replace ".jpg",".webp")
         }else{
-            ffmpeg -y -i $_ ("webp/$_" -replace ".jpg",".webp")
+            ffmpeg -y -i $_ ("webp/$($_.Name)" -replace ".jpg",".webp")
         }
     }    
 }
