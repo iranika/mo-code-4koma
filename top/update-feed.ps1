@@ -1,5 +1,5 @@
 param (
-    $feedfile =".\feed.atom"
+    $feedfile = "$PSScriptRoot/feed.atom"
 )
 
 $dateTimeOffset = [System.DateTimeOffset]::Now

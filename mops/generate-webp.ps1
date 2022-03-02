@@ -5,7 +5,8 @@ param (
     $OnlyRecently
 )
 
-Set-Location $PSScriptRoot/4koma/ja
+$base = pwd
+Set-Location ./4koma/ja
 
 if ($OnlyRecently){
     (Get-ChildItem -Name -Filter "*.jpg" | Sort-Object { $_.LastWriteTime })[-1..-5] | % -Parallel {
@@ -25,9 +26,6 @@ if ($OnlyRecently){
         }
     }    
 }
-Set-Location $PSScriptRoot/top
 
-ffmpeg -y -i top.jpg top.webp
-
-Set-Location $PSScriptRoot
+Set-Location $base
 
