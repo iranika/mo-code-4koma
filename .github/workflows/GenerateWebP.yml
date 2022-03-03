@@ -28,7 +28,9 @@ jobs:
         Install-Module AngleParse
     - name: generate-webp
       run: |
-        pwsh ./mops/generate-webp.ps1 -Debug
+        pwsh ./mops/generate-4komaDataJs.ps1 -Debug
+        pwsh ./mops/download-img.ps1 -OnlyRecently -Debug
+        pwsh ./mops/generate-webp.ps1 -OnlyRecently -Debug
     - name: commit webp
       run: |
         (git add 4koma/* && git commit -m "debug: find update webp" && git push) || echo "No update."
