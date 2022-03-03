@@ -10,7 +10,7 @@ Set-Location ./4koma/ja
 Write-Debug "current dir: $(pwd)"
 if ($OnlyRecently){
     Write-Debug "generate-webp is OnlyRecently mode;"
-    (Get-ChildItem -Filter "*.jpg" | Sort-Object -Property LastWriteTime)[-5..-1] | % -Parallel {
+    (Get-ChildItem -Filter "*.jpg" | Sort-Object -Property LastWriteTime)[-5..-1] | % {
         Write-Debug "webp fille: $($_.Name)"
         ffmpeg -y -i $_.Name ("webp/$($_.Name)" -replace ".jpg",".webp") || "ffmpeg was done: $($_.Name)"
     }
