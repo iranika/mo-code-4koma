@@ -27,9 +27,8 @@ jobs:
         Set-PSRepository PSGallery -InstallationPolicy Trusted
         Install-Module AngleParse
     - name: generate-webp
-      shell: pwsh
       run: |
-        & ./mops/generate-webp.ps1 -Debug
+        pwsh ./mops/generate-webp.ps1 -Debug
     - name: commit webp
       run: |
         (git add 4koma/* && git commit -m "debug: find update webp" && git push) || echo "No update."
