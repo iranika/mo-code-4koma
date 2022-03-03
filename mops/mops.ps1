@@ -17,7 +17,7 @@ if ($check -or $ForceCheck){
     & $PSScriptRoot/update-json.ps1
     & $PSScriptRoot/generate-4komaDataJs.ps1
     & $PSScriptRoot/download-img.ps1 -OnlyRecently
-    & $PSScriptRoot/generate-webp.ps1 -OnlyRecently
+    & $PSScriptRoot/generate-webp.ps1 -OnlyRecently -Debug
     
     #NOTE: 現状は4komaData.jsonを自動生成しないのでReturnNewContentOnlyオプションで最短実行する
     $newContent = & $PSScriptRoot/update-json -ReturnNewContentOnly -Debug
