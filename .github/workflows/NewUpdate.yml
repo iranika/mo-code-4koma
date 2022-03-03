@@ -32,16 +32,14 @@ jobs:
         Set-PSRepository PSGallery -InstallationPolicy Trusted
         Install-Module AngleParse
     - name: check update momoirocode 
-      shell: pwsh
       run: |
-        & ./mops/mops.ps1 -Debug
+        pwsh ./mops/mops.ps1 -Debug
     - name: commit 4koma feed and imgage
       run: |
         (git add feed.atom update-info.dat 4koma/* 4komaData.json 4komaDataMin.js 4komaData.js && git commit -m "mops: find new update." && git push) || echo "No update."
     - name: download top image.
-      shell: pwsh
       run: |
-        & ./top/download.ps1
+        pwsh ./top/download.ps1
     - name: commit top image.
       run: |
         (git add top/top.jpg top/top.webp && git commit -m "top:image was changed" && pwsh ./top/update-feed.ps1 && git add top/feed.atom && git commit -m "top:feed was updated" && git push) || echo "No update top page."
