@@ -2270,6 +2270,7 @@ pageData =
     "Title": "おにんぎょう",
     "ImagesUrl": [
       "/284-1.jpg",
+      "/284-2.jpg",
       "/sp.jpg"
     ]
   }
