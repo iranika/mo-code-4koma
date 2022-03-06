@@ -71,5 +71,5 @@ $obj = 0..($list.count -1) | % -parallel {
     }
 } | Sort-Object -Property Index | % { $_.Page }
 
-$obj
 $obj | ConvertTo-Json | Out-File $OutFile -Encoding utf8
+$obj
