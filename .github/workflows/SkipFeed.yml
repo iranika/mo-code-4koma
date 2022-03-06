@@ -1,4 +1,4 @@
-name: New Update Check
+name: Skip feed
 
 on:
   workflow_dispatch:
