@@ -33,5 +33,5 @@ jobs:
         pwsh ./mops/generate-webp.ps1 -OnlyRecently -Debug
     - name: commit webp
       run: |
-        (git add 4koma/* && git commit -m "debug: find update webp" && git push) || echo "No update."
+        (git add 4koma/* 4komaData.json 4komaData.js 4komaDataMin.js && git commit -m "debug: find update webp" && git push) || echo "No update."
 
