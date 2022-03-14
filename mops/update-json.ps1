@@ -9,7 +9,7 @@ param (
 
 Import-Module AngleParse
 
-$dom = Invoke-WebRequest $SiteUrl | Select-HtmlContent "li", @{
+$dom = Invoke-WebRequest $SiteUrl | Select-HtmlContent "div.menu > ul > li", @{
     title = "a"
     href = "a", ([AngleParse.Attr]::Href)
 }

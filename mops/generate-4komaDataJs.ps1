@@ -22,7 +22,7 @@ $js = $json | % {
 }
 
 "pageData = " > $OutFile
-$js | Select-Object Title,ImagesUrl | ConvertTo-Json >> $OutFile
+$js | Select-Object Title,ImagesUrl,Index | ConvertTo-Json >> $OutFile
 
 #Note: 破壊的変更で$jsを壊しちゃうので上記の後ろで実行する
 $jsMin = $js | % {
@@ -36,4 +36,4 @@ $jsMin = $js | % {
 }
 
 "pageData = " > $JsMinFile
-$jsMin | Select-Object Title,ImagesUrl | ConvertTo-Json >> $JsMinFile
+$jsMin | Select-Object Title,ImagesUrl,Index | ConvertTo-Json >> $JsMinFile

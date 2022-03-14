@@ -17,6 +17,7 @@ if ($check -or $ForceCheck){
 
     #
     & $PSScriptRoot/update-json.ps1 -Debug
+    & $PSScriptRoot/patch-json.ps1 -Debug
     & $PSScriptRoot/generate-4komaDataJs.ps1 -Debug
     & $PSScriptRoot/download-img.ps1 -OnlyRecently
     & $PSScriptRoot/generate-webp.ps1 -OnlyRecently -Debug

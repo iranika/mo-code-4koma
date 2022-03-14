@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   
   schedule:
-    - cron: '*/20 * * * *'
+    - cron: '*/15 * * * *'
       branches:
         - main
 
@@ -12,8 +12,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: FedericoCarboni/setup-ffmpeg@v1
+    - uses: actions/checkout@v3
+    - uses: FedericoCarboni/setup-ffmpeg@v2
     - name: initialize git setting.
       run: |
         git config --global user.name "iranika"
@@ -21,7 +21,7 @@ jobs:
         git remote set-url origin https://iranika:${GITHUB_TOKEN}@github.com/iranika/mo-code-4koma.git
     - name: Setup PowerShell module cache
       id: cacher
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: "~/.local/share/powershell/Modules"
         key: ${{ runner.os }}-AngleParse
@@ -42,5 +42,5 @@ jobs:
         pwsh ./top/download.ps1
     - name: commit top image.
       run: |
-        (git add top/top.jpg top/top.webp && git commit -m "top:image was changed" && pwsh ./top/update-feed.ps1 && git add top/feed.atom && git commit -m "top:feed was updated" && git push) || echo "No update top page."
+        (git add top/top.jpg top/top.webp && git commit -m "top:image was changed" && pwsh ./top/update-feed.ps1 && git add top/feed.atom top/archives/* top/archives.json && git commit -m "top:feed was updated" && git push) || echo "No update top page."
 
