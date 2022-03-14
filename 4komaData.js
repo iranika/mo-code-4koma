@@ -2274,5 +2274,12 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/284-3.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ]
+  },
+  {
+    "Title": "比喩",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/285-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ]
   }
 ]
