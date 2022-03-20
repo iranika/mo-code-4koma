@@ -2281,5 +2281,12 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/285-1.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ]
+  },
+  {
+    "Title": "もそもそ",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/286-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ]
   }
 ]
