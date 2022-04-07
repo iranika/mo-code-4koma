@@ -2294,6 +2294,7 @@ pageData =
     "Title": "副作用",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/287-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/287-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ]
   }
