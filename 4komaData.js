@@ -2303,6 +2303,7 @@ pageData =
     "Title": "きゃんぷ",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/288-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/288-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ]
   }

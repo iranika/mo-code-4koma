@@ -2303,6 +2303,7 @@ pageData =
     "Title": "きゃんぷ",
     "ImagesUrl": [
       "/288-1.jpg",
+      "/288-2.jpg",
       "/sp.jpg"
     ]
   }
