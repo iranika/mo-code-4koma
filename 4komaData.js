@@ -2306,5 +2306,12 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/288-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ]
+  },
+  {
+    "Title": "醍醐味",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/289-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ]
   }
 ]
