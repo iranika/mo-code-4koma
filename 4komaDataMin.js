@@ -2311,6 +2311,7 @@ pageData =
     "Title": "醍醐味",
     "ImagesUrl": [
       "/289-1.jpg",
+      "/289-2.jpg",
       "/sp.jpg"
     ]
   }
