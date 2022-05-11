@@ -2609,5 +2609,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 289
+  },
+  {
+    "Title": "仕事",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/290-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 290
   }
 ]
