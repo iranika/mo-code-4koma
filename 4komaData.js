@@ -2617,5 +2617,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 290
+  },
+  {
+    "Title": "優しく",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/291-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 291
   }
 ]
