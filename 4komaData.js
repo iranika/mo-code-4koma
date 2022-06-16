@@ -2644,5 +2644,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 293
+  },
+  {
+    "Title": "お婆ちゃんの薬",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/294-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 294
   }
 ]
