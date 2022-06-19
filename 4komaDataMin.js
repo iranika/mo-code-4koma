@@ -2649,6 +2649,7 @@ pageData =
     "Title": "お婆ちゃんの薬",
     "ImagesUrl": [
       "/294-1.jpg",
+      "/294-2.jpg",
       "/sp.jpg"
     ],
     "Index": 294
