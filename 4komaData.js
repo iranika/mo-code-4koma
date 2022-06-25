@@ -2653,5 +2653,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 294
+  },
+  {
+    "Title": "整う",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/295-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 295
   }
 ]
