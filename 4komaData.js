@@ -2658,6 +2658,7 @@ pageData =
     "Title": "整う",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/295-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/295-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 295
