@@ -2667,6 +2667,7 @@ pageData =
     "Title": "怪談会",
     "ImagesUrl": [
       "/296-1.jpg",
+      "/296-2.jpg",
       "/sp.jpg"
     ],
     "Index": 296
