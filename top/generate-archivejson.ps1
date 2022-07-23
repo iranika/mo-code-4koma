@@ -5,7 +5,7 @@ param (
 )
 
 
-$files = (Get-ChildItem -Path $PSScriptRoot/archives/).Name
+$files = (Get-ChildItem -Path $PSScriptRoot/archives/ | Sort-Object -Property Name).Name
 
 $json = [ordered]@{
     archivesUrl = $archivesUrl;
