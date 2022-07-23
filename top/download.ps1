@@ -8,3 +8,7 @@ Copy-Item "$PSScriptRoot/top.jpg" "$PSScriptRoot/archives/$filename"
 
 #generate webp
 ffmpeg -y -i "$PSScriptRoot/top.jpg" "$PSScriptRoot/top.webp"
+
+#generate archives json
+
+& $PSScriptRoot/generate-archivejson.ps1
