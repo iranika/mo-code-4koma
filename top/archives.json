@@ -1,5 +1,4 @@
 {
-  "archivesUrl": "https://mo4koma.iranika.info/top/archives",
   "files": [
     "hakobera.jpg",
     "hakobera2.jpg",
@@ -58,5 +57,6 @@
     "tabirako4y.jpg",
     "tabirako5.jpg",
     "tabirako5y.jpg"
-  ]
+  ],
+  "archivesUrl": "https://mo4koma.iranika.info/top/archives"
 }
