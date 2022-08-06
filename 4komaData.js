@@ -2678,6 +2678,7 @@ pageData =
     "Title": "脱皮",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/297-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/297-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 297
