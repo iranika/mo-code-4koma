@@ -2689,6 +2689,7 @@ pageData =
     "Title": "蝉治郎",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/298-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/298-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 298
