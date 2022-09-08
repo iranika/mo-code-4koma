@@ -2698,6 +2698,7 @@ pageData =
     "Title": "防災の日",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/299-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/299-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 299
