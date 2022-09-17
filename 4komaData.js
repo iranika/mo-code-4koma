@@ -2703,5 +2703,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 299
+  },
+  {
+    "Title": "ゲーム日和",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/300-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 300
   }
 ]
