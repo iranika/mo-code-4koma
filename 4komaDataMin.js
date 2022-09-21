@@ -2708,6 +2708,7 @@ pageData =
     "Title": "ゲーム日和",
     "ImagesUrl": [
       "/300-1.jpg",
+      "/300-2.jpg",
       "/sp.jpg"
     ],
     "Index": 300
