@@ -2718,6 +2718,7 @@ pageData =
     "Title": "おおがた",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/301-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/301-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 301
