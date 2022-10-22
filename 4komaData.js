@@ -2728,6 +2728,7 @@ pageData =
     "Title": "ミステリー",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/302-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/302-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 302
