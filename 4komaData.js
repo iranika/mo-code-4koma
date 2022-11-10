@@ -2739,6 +2739,7 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/303-1.jpg",
       "https://mo4koma.iranika.info/4koma/ja/303-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/303-3.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/303-4.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 303
