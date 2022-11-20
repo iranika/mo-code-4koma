@@ -2748,6 +2748,7 @@ pageData =
     "Title": "SMB",
     "ImagesUrl": [
       "/304-1.jpg",
+      "/304-2.jpg",
       "/sp.jpg"
     ],
     "Index": 304
