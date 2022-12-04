@@ -2754,5 +2754,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 304
+  },
+  {
+    "Title": "ほしいもの",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/305-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 305
   }
 ]
