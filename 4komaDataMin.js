@@ -2788,6 +2788,7 @@ pageData =
     "Title": "リザルト",
     "ImagesUrl": [
       "/308-1.jpg",
+      "/308-2.jpg",
       "/sp.jpg"
     ],
     "Index": 308
