@@ -2794,5 +2794,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 308
+  },
+  {
+    "Title": "もくしょく",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/309-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 309
   }
 ]
