@@ -2841,5 +2841,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 313
+  },
+  {
+    "Title": "守り神",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/314-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 314
   }
 ]
