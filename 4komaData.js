@@ -2850,5 +2850,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 314
+  },
+  {
+    "Title": "いとなみ",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/315-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 315
   }
 ]
