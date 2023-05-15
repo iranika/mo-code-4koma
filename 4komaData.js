@@ -2864,6 +2864,7 @@ pageData =
     "Title": "ぼやぼや",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/316-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/316-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 316
