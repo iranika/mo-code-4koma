@@ -2883,6 +2883,7 @@ pageData =
     "Title": "値下げ",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/318-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/318-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 318
