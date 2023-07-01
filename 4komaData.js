@@ -2898,5 +2898,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 319
+  },
+  {
+    "Title": "ビンテージ",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/320-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 320
   }
 ]
