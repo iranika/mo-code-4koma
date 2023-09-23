@@ -2961,6 +2961,7 @@ pageData =
     "Title": "アイドル",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/326-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/326-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 326
