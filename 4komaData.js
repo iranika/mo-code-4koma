@@ -2968,5 +2968,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 326
+  },
+  {
+    "Title": "おはし",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/327-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 327
   }
 ]
