@@ -2975,6 +2975,7 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/327-1.jpg",
       "https://mo4koma.iranika.info/4koma/ja/327-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/327-3.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/327-4.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 327
