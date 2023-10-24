@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>桃色CODE</title>
+</head>
+
+<frameset cols="10%,*">
+
+<frame src="mocode.html" name="menu" title="メニュー">
+<frame src="toppage.html" name="top" title="コンテンツ">
+
+<noframes>
+<body>
+<p>フレームの代替内容</p>
+<script type="text/javascript"><!--
+var fc2footerparam = 'charset=' + encodeURIComponent(document.charset ? document.charset : document.characterSet) + '&url=' + encodeURIComponent(document.location) + '&service=0&r=' + Math.floor(Math.random()*99999999999);
+var fc2footertag = '<' + 'script src="//vip.chps-api.fc2.com/apis/footer/?' + fc2footerparam + '" charset="UTF-8"><' + '/script>';
+document.write(fc2footertag);
+//--></script>
+<!-- FC2, inc.-->
+<img src="//media.fc2.com/counter_img.php?id=50" style="visibility:hidden" alt="inserted by FC2 system" width="0" height="0">
+<!-- FC2, inc.-->
+</body>
+</noframes>
+
+</frameset>
+
+</html>
