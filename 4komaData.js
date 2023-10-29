@@ -2979,5 +2979,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 327
+  },
+  {
+    "Title": "犯罪者",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/328-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 328
   }
 ]
