@@ -2995,6 +2995,7 @@ pageData =
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/329-1.jpg",
       "https://mo4koma.iranika.info/4koma/ja/329-2.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/329-3.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 329
