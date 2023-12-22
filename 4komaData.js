@@ -3009,5 +3009,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 330
+  },
+  {
+    "Title": "割引",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/331-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 331
   }
 ]
