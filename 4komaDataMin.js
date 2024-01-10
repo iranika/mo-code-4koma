@@ -3023,6 +3023,7 @@ pageData =
     "Title": "わんぱく相撲",
     "ImagesUrl": [
       "/332-1.jpg",
+      "/332-2.jpg",
       "/sp.jpg"
     ],
     "Index": 332
