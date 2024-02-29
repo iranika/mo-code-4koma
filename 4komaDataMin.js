@@ -3061,6 +3061,7 @@ pageData =
     "Title": "チョコ作り",
     "ImagesUrl": [
       "/336-1.jpg",
+      "/336-2.jpg",
       "/sp.jpg"
     ],
     "Index": 336
