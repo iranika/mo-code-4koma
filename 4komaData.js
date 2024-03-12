@@ -3066,5 +3066,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 336
+  },
+  {
+    "Title": "改良",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/337-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 337
   }
 ]
