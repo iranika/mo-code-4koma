@@ -3077,5 +3077,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 337
+  },
+  {
+    "Title": "みじかい",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/338-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 338
   }
 ]
