@@ -3086,5 +3086,13 @@ pageData =
       "/sp.jpg"
     ],
     "Index": 338
+  },
+  {
+    "Title": "和の心",
+    "ImagesUrl": [
+      "/339-1.jpg",
+      "/sp.jpg"
+    ],
+    "Index": 339
   }
 ]

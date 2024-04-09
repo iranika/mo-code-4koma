@@ -3086,5 +3086,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 338
+  },
+  {
+    "Title": "和の心",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/339-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 339
   }
 ]
