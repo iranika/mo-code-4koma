@@ -3102,5 +3102,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 340
+  },
+  {
+    "Title": "平日",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/341-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 341
   }
 ]
