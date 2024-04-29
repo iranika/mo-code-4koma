@@ -3110,5 +3110,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 341
+  },
+  {
+    "Title": "ゴールデンウィーク",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/342-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 342
   }
 ]
