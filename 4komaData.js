@@ -3118,5 +3118,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 342
+  },
+  {
+    "Title": "いちご狩り",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/343-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 343
   }
 ]
