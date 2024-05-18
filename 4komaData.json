@@ -3472,12 +3472,21 @@
     "Index": 343
   },
   {
-    "Title": "いちご狩り",
+    "Title": "ビニールハウス",
     "BaseUrl": "http://momoirocode.web.fc2.com/4koma/344.html",
     "ImagesUrl": [
       "344-1.jpg",
       "sp.jpg"
     ],
     "Index": 344
+  },
+  {
+    "Title": "シメ",
+    "BaseUrl": "http://momoirocode.web.fc2.com/4koma/345.html",
+    "ImagesUrl": [
+      "345-1.jpg",
+      "sp.jpg"
+    ],
+    "Index": 345
   }
 ]
