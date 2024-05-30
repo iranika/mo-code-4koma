@@ -3148,6 +3148,7 @@ pageData =
     "Title": "がまん",
     "ImagesUrl": [
       "/346-1.jpg",
+      "/346-2.jpg",
       "/sp.jpg"
     ],
     "Index": 346
