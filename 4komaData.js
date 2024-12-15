@@ -3284,5 +3284,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 360
+  },
+  {
+    "Title": "ブーツ",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/361-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 361
   }
 ]
