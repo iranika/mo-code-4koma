@@ -3313,5 +3313,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 363
+  },
+  {
+    "Title": "ねがえり",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/364-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 364
   }
 ]
