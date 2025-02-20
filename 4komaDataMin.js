@@ -3327,6 +3327,7 @@ pageData =
     "Title": "気構え",
     "ImagesUrl": [
       "/365-1.jpg",
+      "/365-2.jpg",
       "/sp.jpg"
     ],
     "Index": 365
