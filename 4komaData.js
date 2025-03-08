@@ -3337,6 +3337,7 @@ pageData =
     "Title": "ゴッブレスユー",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/366-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/366-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 366
