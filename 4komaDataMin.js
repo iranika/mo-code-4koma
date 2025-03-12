@@ -3338,7 +3338,6 @@ pageData =
     "ImagesUrl": [
       "/366-1.jpg",
       "/366-2.jpg",
-      "/366-2.jpg",
       "/sp.jpg"
     ],
     "Index": 366
