@@ -3373,5 +3373,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 369
+  },
+  {
+    "Title": "過ごし方",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/370-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 370
   }
 ]
