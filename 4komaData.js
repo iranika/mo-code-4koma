@@ -3389,6 +3389,7 @@ pageData =
     "Title": "心配",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/371-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/371-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 371
