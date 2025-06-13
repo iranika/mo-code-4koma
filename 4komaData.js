@@ -3393,5 +3393,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 371
+  },
+  {
+    "Title": "てるてる様",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/372-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 372
   }
 ]
