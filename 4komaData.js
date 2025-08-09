@@ -3429,6 +3429,7 @@ pageData =
     "Title": "夕立",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/375-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/375-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 375
