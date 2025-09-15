@@ -3448,7 +3448,9 @@ pageData =
   },
   {
     "Title": "アウトロー",
-    "ImagesUrl": null,
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/377-1.jpg"
+    ],
     "Index": 377
   }
 ]

@@ -3825,7 +3825,7 @@
   {
     "Title": "アウトロー",
     "BaseUrl": "http://momoirocode.web.fc2.com/4koma/377.html",
-    "ImagesUrl": null,
+    "ImagesUrl": ["377-1.jpg"],
     "Index": 377
   }
 ]
