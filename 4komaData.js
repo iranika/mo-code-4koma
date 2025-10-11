@@ -3460,6 +3460,7 @@ pageData =
     "Title": "彼岸花",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/378-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/378-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 378
