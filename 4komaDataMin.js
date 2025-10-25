@@ -3470,6 +3470,7 @@ pageData =
     "Title": "肩こり",
     "ImagesUrl": [
       "/379-1.jpg",
+      "/379-2.jpg",
       "/sp.jpg"
     ],
     "Index": 379
