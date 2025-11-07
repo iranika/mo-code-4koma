@@ -3479,6 +3479,7 @@ pageData =
     "Title": "秋のお茶会",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/380-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/380-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 380
