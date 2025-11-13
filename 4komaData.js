@@ -3483,5 +3483,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 380
+  },
+  {
+    "Title": "採点競技",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/381-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 381
   }
 ]
