@@ -3488,6 +3488,7 @@ pageData =
     "Title": "採点競技",
     "ImagesUrl": [
       "/381-1.jpg",
+      "/381-2.jpg",
       "/sp.jpg"
     ],
     "Index": 381
