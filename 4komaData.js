@@ -3520,5 +3520,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 384
+  },
+  {
+    "Title": "初日の出",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/385-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 385
   }
 ]
