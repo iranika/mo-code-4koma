@@ -3533,6 +3533,7 @@ pageData =
     "Title": "三が日",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/386-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/386-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 386
