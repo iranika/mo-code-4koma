@@ -3537,5 +3537,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 386
+  },
+  {
+    "Title": "対策",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/387-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 387
   }
 ]
