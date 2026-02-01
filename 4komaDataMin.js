@@ -3542,6 +3542,7 @@ pageData =
     "Title": "対策",
     "ImagesUrl": [
       "/387-1.jpg",
+      "/387-2.jpg",
       "/sp.jpg"
     ],
     "Index": 387
