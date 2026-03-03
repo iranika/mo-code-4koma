@@ -3560,6 +3560,7 @@ pageData =
     "Title": "デトックス",
     "ImagesUrl": [
       "/389-1.jpg",
+      "/389-2.jpg",
       "/sp.jpg"
     ],
     "Index": 389
