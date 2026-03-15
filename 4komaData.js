@@ -3562,6 +3562,7 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/389-1.jpg",
       "https://mo4koma.iranika.info/4koma/ja/389-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/389-3.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/389-4.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 389
