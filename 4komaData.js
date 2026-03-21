@@ -3566,5 +3566,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 389
+  },
+  {
+    "Title": "たおこし",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/390-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 390
   }
 ]
