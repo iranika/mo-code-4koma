@@ -3571,6 +3571,7 @@ pageData =
     "Title": "たおこし",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/390-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/390-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 390
