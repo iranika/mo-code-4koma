@@ -3593,5 +3593,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 392
+  },
+  {
+    "Title": "連休",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/393-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 393
   }
 ]
