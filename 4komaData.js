@@ -3610,5 +3610,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 394
+  },
+  {
+    "Title": "タイトルコール",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/395-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 395
   }
 ]
