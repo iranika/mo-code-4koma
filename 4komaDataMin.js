@@ -3615,6 +3615,7 @@ pageData =
     "Title": "タイトルコール",
     "ImagesUrl": [
       "/395-1.jpg",
+      "/395-2.jpg",
       "/sp.jpg"
     ],
     "Index": 395
