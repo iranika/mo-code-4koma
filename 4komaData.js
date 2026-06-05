@@ -3620,5 +3620,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 395
+  },
+  {
+    "Title": "そうめん",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/396-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 396
   }
 ]
