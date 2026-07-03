@@ -3635,6 +3635,7 @@ pageData =
     "Title": "願い事",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/397-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/397-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 397
