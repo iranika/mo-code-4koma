@@ -3666,6 +3666,7 @@ pageData =
     "Title": "こだわり",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/400-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/400-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 400
