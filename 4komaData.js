@@ -3675,6 +3675,7 @@ pageData =
     "Title": "怒鳴られる",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/401-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/401-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 401
