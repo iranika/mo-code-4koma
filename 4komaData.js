@@ -3685,6 +3685,7 @@ pageData =
     "Title": "あかとんぼ",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/402-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/402-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 402
