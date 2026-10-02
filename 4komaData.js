@@ -3689,5 +3689,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 402
+  },
+  {
+    "Title": "とんぼ博士",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/403-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 403
   }
 ]
