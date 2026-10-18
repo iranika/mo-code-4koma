@@ -3699,5 +3699,13 @@ pageData =
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 403
+  },
+  {
+    "Title": "同じ穴",
+    "ImagesUrl": [
+      "https://mo4koma.iranika.info/4koma/ja/404-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
+    ],
+    "Index": 404
   }
 ]

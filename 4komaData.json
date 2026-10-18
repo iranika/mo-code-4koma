@@ -4102,5 +4102,14 @@
       "sp.jpg"
     ],
     "Index": 403
+  },
+  {
+    "Title": "同じ穴",
+    "BaseUrl": "http://momoirocode.web.fc2.com/4koma/404.html",
+    "ImagesUrl": [
+      "404-1.jpg",
+      "sp.jpg"
+    ],
+    "Index": 404
   }
 ]
