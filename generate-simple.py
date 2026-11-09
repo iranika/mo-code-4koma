@@ -97,6 +97,18 @@ def join_pages(
     return result
 
 
+def fit_max_dimension(image: Image.Image, max_dimension: int = 2048) -> Image.Image:
+    """Shrink only when a side exceeds the limit; never upscale or crop."""
+    width, height = image.size
+    scale = min(1.0, max_dimension / width, max_dimension / height)
+    if scale >= 1.0:
+        return image
+    return image.resize(
+        (max(1, int(width * scale)), max(1, int(height * scale))),
+        Image.Resampling.LANCZOS,
+    )
+
+
 def read_episodes(docs: Path) -> list[dict[str, Any]]:
     rows = json.loads((docs / "4komaData.json").read_text(encoding="utf-8-sig"))
     if not isinstance(rows, list) or not rows:
@@ -143,6 +155,7 @@ def generate(
     trim: bool = True,
     threshold: int = 16,
     max_width: int = 1600,
+    max_dimension: int = 2048,
     gap: int = 16,
     padding: int = 16,
     quality: int = 90,
@@ -150,6 +163,7 @@ def generate(
     if (
         max_width <= 2 * padding
         or max_width > 65500
+        or not 1 <= max_dimension <= 65500
         or gap < 0
         or padding < 0
         or not 1 <= threshold <= 255
@@ -171,6 +185,7 @@ def generate(
             gap=gap,
             padding=padding,
         )
+        image = fit_max_dimension(image, max_dimension)
         encoded = io.BytesIO()
         image.save(
             encoded,
@@ -202,6 +217,12 @@ def main() -> None:
     parser.add_argument(
         "--max-width", type=int, default=1600, help="Maximum width; never upscale"
     )
+    parser.add_argument(
+        "--max-dimension",
+        type=int,
+        default=2048,
+        help="Maximum width and height in pixels; shrink only, never upscale",
+    )
     parser.add_argument("--gap", type=int, default=16, help="Pixels between pages")
     parser.add_argument(
         "--padding", type=int, default=16, help="Outer padding in pixels"
@@ -214,6 +235,7 @@ def main() -> None:
             trim=not args.no_trim,
             threshold=args.threshold,
             max_width=args.max_width,
+            max_dimension=args.max_dimension,
             gap=args.gap,
             padding=args.padding,
             quality=args.quality,

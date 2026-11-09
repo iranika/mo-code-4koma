@@ -38,6 +38,8 @@ python generate-simple.py
 実画像をぼかす処理ではなく、保存する絵は元画像から切り出します。
 
 最大幅1600px・JPEG品質90・ページ間16px・外周16pxで、縦横比を保ち、拡大はしません。
+結合後に縦横どちらかが2048pxを超える場合は、縦横比を保ったまま長辺が2048pxに
+なるよう縮小します（VRChatの画像読み込み上限に対応）。切り抜きや分割はしません。
 1話内の各画像を同じ倍率で扱い、原作のコマ配置や読む順序は変更しません。
 タブレット縦持ちで横幅に合わせて読む想定のため、長い話は縦スクロールが必要です。
 薄い線まで含めた自動判定には限界があるため、余白を確実にすべて残したい場合は
@@ -45,7 +47,7 @@ python generate-simple.py
 
 ```sh
 python generate-simple.py --no-trim
-python generate-simple.py --max-width 2000 --gap 24 --padding 24 --quality 95
+python generate-simple.py --max-width 2000 --max-dimension 2048 --gap 24 --padding 24 --quality 95
 # 検出感度を上げる（余白が残りやすくなる）
 python generate-simple.py --threshold 12
 ```
