@@ -1,6 +1,72 @@
 # mo-code-4koma
 道草屋バックヤード漫画の配信用
 
+### 1話1画像の simple 版
+
+Python 3.10以降で、原本と既存の `4komaData.json` を変更せず、
+話ごとに画像を上から順に結合した画像と、同じ形式の `4komaDataSimple.json` を生成できます。
+
+```sh
+python -m venv .venv
+# Linux/macOS: source .venv/bin/activate
+# PowerShell: .venv\Scripts\Activate.ps1
+python -m pip install -r requirements-simple.txt
+python generate-simple.py
+```
+
+- 出力画像: `4koma/ja/simple/{Index}.jpg`
+- 公開パス: `/4koma/ja/simple/{Index}.jpg`
+- 公開JSON: `/4komaDataSimple.json`
+- `Title`・`BaseUrl`・`Index`・話順はそのまま、`ImagesUrl` だけを1件に置き換えます。
+
+`ImagesUrl` は既存JSONと同じく、日本語画像ディレクトリ `/4koma/ja/` を基準にします
+（JSON自身からの相対パスではありません）。たとえば第404話は次のようになります。
+
+```json
+{
+  "Title": "同じ穴",
+  "BaseUrl": "http://momoirocode.web.fc2.com/4koma/404.html",
+  "ImagesUrl": ["./simple/404.jpg"],
+  "Index": 404
+}
+```
+
+背景の微細な模様をならして外周の余白だけを検出し、検出範囲に安全余白を付けて
+切り抜きます。切り抜き対象は外周のみで、コマ間の余白・コマ外の文字やイラストは
+残します。空の背景画像（`sp.jpg` など）は名前に依存せず除外します。
+背景色が暗い場合や四隅の色が大きく違う場合は、安全のため切り抜きません。
+実画像をぼかす処理ではなく、保存する絵は元画像から切り出します。
+
+最大幅1600px・JPEG品質90・ページ間16px・外周16pxで、縦横比を保ち、拡大はしません。
+1話内の各画像を同じ倍率で扱い、原作のコマ配置や読む順序は変更しません。
+タブレット縦持ちで横幅に合わせて読む想定のため、長い話は縦スクロールが必要です。
+薄い線まで含めた自動判定には限界があるため、余白を確実にすべて残したい場合は
+`--no-trim` を指定してください（空の背景画像も保持します）。
+
+```sh
+python generate-simple.py --no-trim
+python generate-simple.py --max-width 2000 --gap 24 --padding 24 --quality 95
+# 検出感度を上げる（余白が残りやすくなる）
+python generate-simple.py --threshold 12
+```
+
+同じ入力・設定・Pillow版なら出力は同じになり、変更のないファイルは書き換えません。
+元画像や話数の情報が欠けている場合はエラーで停止し、不完全なJSONを公開しません。
+
+`NewUpdate`・`SkipFeed`・`GenerateWebP` でも原本の更新後に自動生成・コミットします。
+手動再生成は GitHub Actions の **Generate simple episodes** → **Run workflow** でも実行できます。
+スクリプトや設定を変更した場合は、生成結果も再生成してコミットしてください。
+
+開発時の検証:
+
+```sh
+python -m pip install -r requirements-dev.txt
+ruff check generate-simple.py test_generate_simple.py
+ruff format --check generate-simple.py test_generate_simple.py
+mypy generate-simple.py --check-untyped-defs
+python -m unittest -v
+```
+
 ### 透過画像を重ねる
 
 [みちくさびゅあー](https://iranika.github.io/mo-code/)は多言語対応を目的として、画像の重ね表示(overlay)に対応しました。  

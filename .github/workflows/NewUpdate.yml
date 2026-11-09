@@ -5,23 +5,27 @@ on:
   
   schedule:
     - cron: '*/15 * * * *'
-      branches:
-        - main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: image-update
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: FedericoCarboni/setup-ffmpeg@v2
+    - uses: actions/checkout@v4
+    - uses: FedericoCarboni/setup-ffmpeg@v3
     - name: initialize git setting.
       run: |
         git config --global user.name "iranika"
         git config --global user.email "7370486+iranika@users.noreply.github.com"
-        git remote set-url origin https://iranika:${GITHUB_TOKEN}@github.com/iranika/mo-code-4koma.git
     - name: Setup PowerShell module cache
       id: cacher
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: "~/.local/share/powershell/Modules"
         key: ${{ runner.os }}-AngleParse
@@ -34,13 +38,27 @@ jobs:
     - name: check update momoirocode 
       run: |
         pwsh ./mops/mops.ps1 -Debug
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: pip
+        cache-dependency-path: requirements-simple.txt
+    - name: Generate simple episode images and JSON
+      run: |
+        python -m pip install -r requirements-simple.txt
+        if ! git diff --quiet -- 4komaData.json 4koma/ja/ || [ ! -f 4komaDataSimple.json ]; then
+          python generate-simple.py
+        fi
     - name: commit 4koma feed and imgage
       run: |
-        (git add feed.atom update-info.dat 4koma/* 4komaData.json 4komaDataMin.js 4komaData.js && git commit -m "mops: find new update." && git push) || echo "No update."
+        git add feed.atom update-info.dat 4koma/ 4komaData.json 4komaDataMin.js 4komaData.js 4komaDataSimple.json
+        if ! git diff --cached --quiet; then
+          git commit -m "mops: find new update."
+          git push
+        fi
     - name: download top image.
       run: |
         pwsh ./top/download.ps1
     - name: commit top image.
       run: |
         (git add top/top.jpg top/top.webp && git commit -m "top:image was changed" && pwsh ./top/update-feed.ps1 && git add top/feed.atom top/archives/* top/archives.json && git commit -m "top:feed was updated" && git push) || echo "No update top page."
-

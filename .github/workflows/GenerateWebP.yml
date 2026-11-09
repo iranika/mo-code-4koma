@@ -2,21 +2,27 @@ name: Generate WebP Debug
 
 on:
   workflow_dispatch:
-  
+
+permissions:
+  contents: write
+
+concurrency:
+  group: image-update
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: FedericoCarboni/setup-ffmpeg@v1
+    - uses: actions/checkout@v4
+    - uses: FedericoCarboni/setup-ffmpeg@v3
     - name: initialize git setting.
       run: |
         git config --global user.name "iranika"
         git config --global user.email "7370486+iranika@users.noreply.github.com"
-        git remote set-url origin https://iranika:${GITHUB_TOKEN}@github.com/iranika/mo-code-4koma.git
     - name: Setup PowerShell module cache
       id: cacher
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: "~/.local/share/powershell/Modules"
         key: ${{ runner.os }}-AngleParse
@@ -31,7 +37,19 @@ jobs:
         pwsh ./mops/generate-4komaDataJs.ps1 -Debug
         pwsh ./mops/download-img.ps1 -OnlyRecently -Debug
         pwsh ./mops/generate-webp.ps1 -OnlyRecently -Debug
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: pip
+        cache-dependency-path: requirements-simple.txt
+    - name: Generate simple episode images and JSON
+      run: |
+        python -m pip install -r requirements-simple.txt
+        python generate-simple.py
     - name: commit webp
       run: |
-        (git add 4koma/* 4komaData.json 4komaData.js 4komaDataMin.js && git commit -m "debug: find update webp" && git push) || echo "No update."
-
+        git add 4koma/ 4komaData.json 4komaData.js 4komaDataMin.js 4komaDataSimple.json
+        if ! git diff --cached --quiet; then
+          git commit -m "debug: find update webp"
+          git push
+        fi

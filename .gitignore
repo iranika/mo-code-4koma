@@ -7,3 +7,7 @@ mosq/nimbledeps/*
 gomosq/*
 mops/4koma/*
 */desktop.ini
+__pycache__/
+.mypy_cache/
+.ruff_cache/
+.venv/
