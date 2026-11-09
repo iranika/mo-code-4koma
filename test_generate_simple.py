@@ -97,6 +97,18 @@ class GenerationTests(unittest.TestCase):
         joined = simple.join_pages(paths, trim=False, padding=0, gap=0)
         self.assertEqual(joined.size, (80, 120))
 
+    def test_max_dimension_shrinks_long_side_without_upscaling(self):
+        Image.new("RGB", (120, 2400), "red").save(self.source / "first.png")
+        simple.generate(self.docs, max_dimension=300)
+        with Image.open(self.source / "simple" / "1.jpg") as image:
+            self.assertLessEqual(image.width, 300)
+            self.assertLessEqual(image.height, 300)
+            self.assertGreater(image.height, image.width)
+        simple.generate(self.docs)
+        with Image.open(self.source / "simple" / "1.jpg") as image:
+            self.assertLessEqual(image.width, 1600)
+            self.assertLessEqual(image.height, 2048)
+
     def test_metadata_paths_originals_and_idempotence(self):
         original = (self.docs / "4komaData.json").read_bytes()
         source_bytes = {path: path.read_bytes() for path in self.source.iterdir()}
@@ -149,6 +161,7 @@ class GenerationTests(unittest.TestCase):
             {"padding": -1},
             {"gap": -1},
             {"max_width": 10},
+            {"max_dimension": 0},
             {"threshold": 0},
             {"quality": 101},
         ]:
@@ -182,6 +195,25 @@ class GenerationTests(unittest.TestCase):
             simple.generate(self.docs)
 
 
+class FitTests(unittest.TestCase):
+    def test_shrinks_only_the_over_limit_side(self):
+        tall = Image.new("RGB", (100, 3000), "red")
+        fitted = simple.fit_max_dimension(tall, 2048)
+        self.assertLessEqual(fitted.width, 2048)
+        self.assertLessEqual(fitted.height, 2048)
+        self.assertLess(fitted.height, 3000)
+        self.assertAlmostEqual(fitted.width / fitted.height, 100 / 3000, delta=0.01)
+        wide = Image.new("RGB", (3000, 100), "red")
+        fitted = simple.fit_max_dimension(wide, 2048)
+        self.assertLessEqual(fitted.width, 2048)
+        self.assertLessEqual(fitted.height, 2048)
+        self.assertLess(fitted.width, 3000)
+
+    def test_small_images_are_not_upscaled(self):
+        image = Image.new("RGB", (100, 200), "red")
+        self.assertEqual(simple.fit_max_dimension(image, 2048).size, (100, 200))
+
+
 class RepositoryCatalogTests(unittest.TestCase):
     def test_numbered_episodes_are_contiguous(self):
         root = Path(__file__).resolve().parent
@@ -205,6 +237,7 @@ class RepositoryCatalogTests(unittest.TestCase):
                 with Image.open(path) as image:
                     self.assertEqual(image.format, "JPEG")
                     self.assertLessEqual(image.width, 1600)
+                    self.assertLessEqual(image.height, 2048)
                     image.load()
 
 
