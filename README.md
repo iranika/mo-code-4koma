@@ -1,10 +1,11 @@
 # mo-code-4koma
 道草屋バックヤード漫画の配信用
 
-### 1話1画像の simple 版
+### VRChat向けの simple 版
 
 Python 3.10以降で、原本と既存の `4komaData.json` を変更せず、
-話ごとに画像を上から順に結合した画像と、同じ形式の `4komaDataSimple.json` を生成できます。
+原本と同じ画像構成のコピーと、対応する `4komaDataSimple.json` を生成できます。
+1話1画像への結合は行いません。
 
 ```sh
 python -m venv .venv
@@ -14,10 +15,11 @@ python -m pip install -r requirements-simple.txt
 python generate-simple.py
 ```
 
-- 出力画像: `4koma/ja/simple/{Index}.jpg`
-- 公開パス: `/4koma/ja/simple/{Index}.jpg`
+- 出力画像: `4koma/ja/simple/<元画像の相対パス>`
+- 公開パス例: `/4koma/ja/simple/404-1.jpg`
 - 公開JSON: `/4komaDataSimple.json`
-- `Title`・`BaseUrl`・`Index`・話順はそのまま、`ImagesUrl` だけを1件に置き換えます。
+- `Title`・`BaseUrl`・`Index`・話順と、`ImagesUrl` の件数・順序を保持します。
+- 画像パスだけを `./simple/` 配下のコピー先に置き換えます。
 
 `ImagesUrl` は既存JSONと同じく、日本語画像ディレクトリ `/4koma/ja/` を基準にします
 （JSON自身からの相対パスではありません）。たとえば第404話は次のようになります。
@@ -26,34 +28,35 @@ python generate-simple.py
 {
   "Title": "同じ穴",
   "BaseUrl": "http://momoirocode.web.fc2.com/4koma/404.html",
-  "ImagesUrl": ["./simple/404.jpg"],
+  "ImagesUrl": [
+    "./simple/404-1.jpg",
+    "./simple/404-2.jpg",
+    "./simple/404-3.jpg",
+    "./simple/404-4.jpg",
+    "./simple/sp.jpg"
+  ],
   "Index": 404
 }
 ```
 
-背景の微細な模様をならして外周の余白だけを検出し、検出範囲に安全余白を付けて
-切り抜きます。切り抜き対象は外周のみで、コマ間の余白・コマ外の文字やイラストは
-残します。空の背景画像（`sp.jpg` など）は名前に依存せず除外します。
-背景色が暗い場合や四隅の色が大きく違う場合は、安全のため切り抜きません。
-実画像をぼかす処理ではなく、保存する絵は元画像から切り出します。
-
-最大幅1600px・JPEG品質90・ページ間16px・外周16pxで、縦横比を保ち、拡大はしません。
-結合後に縦横どちらかが2048pxを超える場合は、縦横比を保ったまま長辺が2048pxに
-なるよう縮小します（VRChatの画像読み込み上限に対応）。切り抜きや分割はしません。
-1話内の各画像を同じ倍率で扱い、原作のコマ配置や読む順序は変更しません。
-タブレット縦持ちで横幅に合わせて読む想定のため、長い話は縦スクロールが必要です。
-薄い線まで含めた自動判定には限界があるため、余白を確実にすべて残したい場合は
-`--no-trim` を指定してください（空の背景画像も保持します）。
+各画像は縦横とも2048px以下ならバイト列を変えずにコピーします。
+どちらかが上限を超える場合だけ、縦横比を保ち、長辺が2048px以内になるよう
+Lanczosフィルターで縮小します。拡大・切り抜き・分割・余白調整は行いません。
+縮小するJPEGは品質95・色差サブサンプリングなし（4:4:4）で保存します。
+空白画像（`sp.jpg` など）も除外せず、共有画像は1ファイルだけコピーして各参照を保ちます。
+元画像がサブディレクトリにある場合も、その相対パスを保持します。
 
 ```sh
-python generate-simple.py --no-trim
-python generate-simple.py --max-width 2000 --max-dimension 2048 --gap 24 --padding 24 --quality 95
-# 検出感度を上げる（余白が残りやすくなる）
-python generate-simple.py --threshold 12
+python generate-simple.py --max-dimension 2048 --quality 95
+# さらに小さい上限も指定可能（2048を超える指定は不可）
+python generate-simple.py --max-dimension 1024
 ```
 
 同じ入力・設定・Pillow版なら出力は同じになり、変更のないファイルは書き換えません。
-元画像や話数の情報が欠けている場合はエラーで停止し、不完全なJSONを公開しません。
+元画像の欠落・破損・危険なパスがあれば、既存のJSON・画像を更新する前に停止します。
+生成完了後、参照されなくなった画像や旧結合画像は `simple/` 内から削除します。
+同じファイル名が原本にもある場合は、結合画像を原本のコピーで置き換えます。
+旧版の `--no-trim`・`--threshold`・`--max-width`・`--gap`・`--padding` は廃止しました。
 
 `NewUpdate`・`SkipFeed`・`GenerateWebP` でも原本の更新後に自動生成・コミットします。
 手動再生成は GitHub Actions の **Generate simple episodes** → **Run workflow** でも実行できます。
