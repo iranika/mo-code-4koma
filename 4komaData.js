@@ -3715,6 +3715,7 @@ pageData =
     "Title": "解禁",
     "ImagesUrl": [
       "https://mo4koma.iranika.info/4koma/ja/405-1.jpg",
+      "https://mo4koma.iranika.info/4koma/ja/405-2.jpg",
       "https://mo4koma.iranika.info/4koma/ja/sp.jpg"
     ],
     "Index": 405
